@@ -3,191 +3,183 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Style - Gaming Community Hub</title>
+  <title>Free Style - Official Website</title>
   <style>
-    /* Basic Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0a0a0a;
-      color: #fff;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: url('background.png.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     /* Header */
     header {
-      background: linear-gradient(90deg, #ff0044, #ff8800);
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      letter-spacing: 1px;
-    }
-
-    nav a {
-      margin-left: 15px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 15px;
       font-size: 14px;
     }
+    header h1 { font-size: 28px; margin-bottom: 5px; color: #ffcc00; }
 
-    nav a:hover {
-      color: #ffd700;
-    }
-
-    /* Hero Section */
-    .hero {
-      height: 90vh;
-      background: 
-        url('game-logo.png') no-repeat center top;
-      background-size: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      text-align: center;
-      padding-top: 200px;
-      background-color: #0a0a0a;
-    }
-
-    .hero h2 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 4px #000;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin-bottom: 10px;
-      text-shadow: 1px 1px 3px #000;
-    }
-
-    .hero .release-msg {
-      font-size: 1.1rem;
-      color: #ffd700;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 2px #000;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background: #ff0044;
-      color: #fff;
+    nav { margin-top: 10px; }
+    nav a {
+      color: white;
+      margin: 0 15px;
       text-decoration: none;
+      font-size: 16px;
       font-weight: bold;
-      border-radius: 8px;
-      transition: 0.3s;
+      transition: color 0.3s;
     }
+    nav a:hover { color: #ffcc00; }
 
-    .btn:hover {
-      background: #ff8800;
-    }
-
-    /* Updates Section */
-    section {
-      padding: 50px 20px;
+    /* Main Section */
+    main {
+      flex: 1;
       text-align: center;
+      padding: 40px 20px;
+    }
+    main h2 { font-size: 40px; margin-bottom: 15px; text-shadow: 2px 2px 5px black; }
+    main p { font-size: 20px; margin-bottom: 30px; }
+
+    /* Trailer */
+    .trailer {
+      margin: 20px auto;
+      max-width: 560px;
+    }
+    .trailer iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      border-radius: 10px;
     }
 
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+    /* Features */
+    .features {
+      margin: 40px 0;
+    }
+    .features h3 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    .features ul {
+      list-style: none;
+      font-size: 18px;
+      background: rgba(0,0,0,0.6);
+      display: inline-block;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .features li { margin: 10px 0; }
+
+    /* Updates */
+    .updates {
+      margin: 40px 0;
+    }
+    .updates h3 { font-size: 28px; margin-bottom: 15px; }
+    .updates p {
+      font-size: 16px;
+      margin: 8px 0;
+      background: rgba(0,0,0,0.5);
+      padding: 10px;
+      border-radius: 5px;
     }
 
-    section p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: 0 auto 10px auto;
+    /* Download */
+    .download {
+      margin: 30px 0;
     }
-
-    section:nth-child(even) {
-      background-color: #1a1a1a;
+    .download a {
+      display: inline-block;
+      background: #ffcc00;
+      color: black;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
     }
+    .download a:hover { background: #ffaa00; }
 
     /* Footer */
     footer {
-      background: #111;
-      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
       text-align: center;
+      padding: 15px;
       font-size: 14px;
     }
-
-    footer p {
-      margin-bottom: 10px;
-    }
-
     footer a {
-      color: #ffd700;
+      color: #ffcc00;
       margin: 0 10px;
       text-decoration: none;
     }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-
   <!-- Header -->
   <header>
-    <h1>🎮 Free Style - Gaming Hub</h1>
+    <h1>Free Style</h1>
+    <p>Developer: Aman_khan_9868</p>
     <nav>
       <a href="#">Home</a>
-      <a href="#">Download</a>
-      <a href="#">Updates</a>
-      <a href="#">Leaderboard</a>
-      <a href="#">Community</a>
+      <a href="#trailer">Trailer</a>
+      <a href="#features">Features</a>
+      <a href="#updates">Updates</a>
+      <a href="#download">Download</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <!-- Main Content -->
+  <main>
     <h2>Welcome to Free Style</h2>
-    <p>Join the ultimate battle experience. Stay updated with latest news, leaderboards, and community events.</p>
-    <p class="release-msg">Game Release: March 2026</p>
-    <a href="https://t.me/Amandev9868" class="btn">Download APK</a>
-  </section>
+    <p>🔥 Game release on <b>March 2026</b> 🔥</p>
 
-  <!-- Updates Section -->
-  <section>
-    <h2>🔥 Latest Updates</h2>
-    <p><b>v1.0:</b> Initial release with shooting, loot system, backpack levels.</p>
-    <p><b>v1.1:</b> Added realistic sky, helicopter drop, parachute system.</p>
-    <p><b>v1.2:</b> New XP & mission system, victory rewards, win tracker.</p>
-  </section>
+    <!-- Trailer -->
+    <section id="trailer" class="trailer">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    </section>
 
-  <!-- Community Section -->
-  <section>
-    <h2>💬 Community</h2>
-    <p>Connect with other players, share tricks, and report bugs in our official Telegram community.</p>
-    <a href="https://t.me/Amandev9868" class="btn">Join Community</a>
-  </section>
+    <!-- Features -->
+    <section id="features" class="features">
+      <h3>Game Features</h3>
+      <ul>
+        <li>🎮 Realistic Shooting & Enemy AI</li>
+        <li>🏠 3D Houses & Environments</li>
+        <li>🪂 Helicopter Drop & Parachute System</li>
+        <li>🎒 Backpack & Loot System</li>
+        <li>🔥 Daily Missions & XP Rewards</li>
+      </ul>
+    </section>
+
+    <!-- Updates -->
+    <section id="updates" class="updates">
+      <h3>Latest Updates</h3>
+      <p>✔ New weapons added (AWM, UMP, AK47, etc.)</p>
+      <p>✔ Backpack & Armor system implemented</p>
+      <p>✔ Lobby customization with Red Fort background</p>
+      <p>✔ Sound effects and emotes added</p>
+    </section>
+
+    <!-- Download -->
+    <section id="download" class="download">
+      <a href="#">⬇ Download Coming Soon</a>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
-    <p>Developer: Aman_khan_9868 | Support: 8958amankhan@gmail.com</p>
+    <p>Support: <a href="mailto:8958amankhan@gmail.com">8958amankhan@gmail.com</a></p>
     <p>
-      <a href="https://www.instagram.com/aman_game_studio?igsh=MTg5YWJ4cGY5c3FxbQ==">Instagram</a> |
-      <a href="https://www.facebook.com/share/1G8pxE1fFP/">Facebook</a> |
-      <a href="https://t.me/Amandev9868">Telegram</a>
+      <a href="https://www.instagram.com/aman_game_studio?igsh=MTg5YWJ4cGY5c3FxbQ==" target="_blank">Instagram</a> |
+      <a href="https://www.facebook.com/share/1G8pxE1fFP/" target="_blank">Facebook</a> |
+      <a href="https://t.me/Amandev9868" target="_blank">Telegram</a>
     </p>
-    <p>© 2025 Free Style | Made by Aman_khan_9868</p>
   </footer>
-
 </body>
 </html>
